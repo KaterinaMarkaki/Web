@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ada & the story behind - Sign Up</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="validation.js" >
+
+        </script>
+        <script src="exercise.js"></script>
+    </head>
+    <body  onload="myInit()">
+        <div id="label">
+            <label class="switch"  >
+                <input type="checkbox" id="myCheck" onclick="Funct4()">
+                <span class="slider round"></span>
+            </label>
+            <p>
+                Dark Mode
+            </p></div>
+            <header>
+                <h1>
+                <img id="logo"
+                src="logo.png" width="100" height="100" alt="logo">
+                Ada & the story behind
+                </h1>
+            </header>
+            <nav class="flex-container" id="myNav">
+                <a href="index.html">Home</a>
+                <a href="programming.html">Programming language</a>
+                <a href="awards.html">Awards</a>
+                <a>Sign Up</a>    
+            </nav> 
+        <p>Οι εγγεγραμμένοι χρήστες έχουν τη δυνατότητα συνεισφοράς 
+            περιεχομένου του ιστοτόπου. Έαν επιθυμείτε κάτι τέτοιο, συμπληρώστε τη παρακάτω φόρμα για την εγγραφή σας.
+        </p>
+        <form action="mailto:katismark99@gmail.com"
+        method="POST">
+            <fieldset>
+                <legend>Στοιχεία επικοινωνίας</legend>
+                <label for="fname">Όνομα:</label><br>
+                <input type="text" id="fname" name="fname" autocomplete="off"><br>
+                <label for="lname">Επίθετο:</label><br>
+                <input type="text" id="lname" name="lname" autocomplete="off"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" autocomplete="on"><br>
+                <label for="addr">Διεύθυνση:</label><br>
+                <input type="text" id="addr" name="addr" autocomplete="off"><br>
+                <label for="birthday">Ημερομηνία γέννησης:</label><br>
+                <input type="date" id="birthday" name="birthday"><br>
+                <label for="country">Χώρα:</label><br>
+                <input type="text" id="country" name="country" autocomplete="off"><br>
+                <label for="phone">Τηλέφωνο:</label><br>
+                <input type="tel" id="phone" name="phone"
+                pattern="[0-9]{10}" autocomplete="on"><br>
+                <details>
+                    <summary>
+                        <label for="uname">Username:</label><br>
+                    </summary>
+                    <p>
+                        Το Username του χρήστη δεν μπορεί να είναι κενό.
+                    </p>
+                    </details>
+                <input type="text" id="uname" name="uname" required autocomplete="off"><br>
+                
+                <label for="passw">Password:</label><br>
+                <input type="password" id="passw" name="passw" required><br>
+                <label for="passw2">Επαναλάβετε τον κωδικό:</label><br>
+                <input type="password" id="passw2" name="passw2" required><br>
+                <span id='displayError'><span>
+
+                <label for="q1">Γνωρίζατε για την Ada Lovelace και τη συνεισφορά της;</label><br>
+                <input type="radio" id="q1Y" name="q1Y" value="yes">Nαι</input>
+                <input type="radio" id="q1N" name="q1N" value="no">Όχι</input>
+                
+                <br>
+                <label for="q2">Γνωρίζετε για κάποια άλλη γυναίκα που έχει συνεισφέρει τον τομέα της τεχνολογίας;</label><br>
+                <input type="radio" id="q2Y" name="q2Y" value="yes">Nαι</input>
+                <input type="radio" id="q2N" name="q2N" value="no">Όχι</input>
+                
+
+                <input type="text" id="q2" name="q2"><br>
+                <label for="q3">Αν ναι, ποιά είναι αυτή και περιγράψτε με λίγα λόγια τη συνεισφορά της.</label><br>
+                <input type="text" id="q3" name="q3"><br>
+                <label for="q4">Ασχολήστε με τον τομέα της πληροφορικής;</label><br>
+                <input type="radio" id="q4Y" name="q4Y" value="yes">Nαι</input>
+                <input type="radio" id="q4N" name="q4N" value="no">Όχι</input>
+                
+                <input type="text" id="q4" name="q4" ><br>
+                <label for="q5">Έχετε γνώσεις προγραμματισμού Ada;</label><br>
+                <input type="radio" id="q5Y" name="q5Y" value="yes">Nαι</input>
+                <input type="radio" id="q5N" name="q5N" value="no">Όχι</input>
+                
+
+                <input type="text" id="q5" name="q5" ><br>
+                <label for="q6">Θα σας ενδιέφερε να μάθετε τα βασικά της γλώσσας αυτής;</label><br>
+                <input type="radio" id="q6Y" name="q6Y" value="yes">Nαι</input>
+                <input type="radio" id="q6N" name="q6N" value="no">Όχι</input>
+                
+
+                <input type="text" id="q6" name="q6" ><br>
+                <label for="q7">Θα θέλατε να κάνετε κάποια προσθήκη στο περιεχόμενο του ιστοτόπου; Αν ναι, πείτε μας με λίγα λόγια τι θα ήταν αυτό.</label><br>
+                <input type="text" id="q7" name="q7" ><br>
+                <label for="q8">Θα θέλατε να κάνετε κάποια διόρθωση στο περιεχόμενο του ιστοτόπου; Αν ναι, πείτε μας με λίγα λόγια τι θα ήταν αυτό.</label><br>
+                <input type="text" id="q8" name="q8" ><br>
+                <label for="q9">Πόσο ευχάριστη σας φάνηκε η χρήση της ιστοσελίδας;</label><br>
+                <input type="text" id="q9" name="q9" ><br>
+                <label for="q10">Τι θα θέλατε να προστεθεί στην ιστοσελίδα;</label><br>
+                <input type="text" id="q10" name="q10"><br>
+                <br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        <footer>
+            <p>
+                Author: Katerina Markaki.
+            </p>
+            <p>
+                All rights reserved || This website has been created for educational purposes.
+            </p>
+        </footer>
+    </body>
+</html>

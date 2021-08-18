@@ -1,0 +1,85 @@
+
+<!--form action="/api/members" method="POST" class="mb">
+    <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" name="name" class="form-contol">
+    </div>
+    <div class="form-group">
+        <label for="email">email</label>
+        <input type="email" name="email" class="form-contol">
+    </div>
+    <input type="submit" value="Add Member" class="btn btn-primary btn-block">
+</form>
+
+            
+            <span>Enter a book's title: </span>
+            <input type="text" id="key-word" name="keyWord">
+            <button type="button" onclick="loadResults()"><i class="fas fa-search"></i></button>
+            <span class="error"></span>
+            
+            <div id="bookData">
+                <ul id="quote-template">
+                    {{#each quotes}}
+                    <li>{{quote}}<i class="far fa-bookmark" id="fav1" onclick="bookMark(this)"></i></li>
+                    {{/each}}
+                </ul>
+            </div>
+            
+            <p style="visibility:hidden;" id="showMore">Περισσότερα αποτελέσματα...</p>
+            <div id="more">
+                <ul id="more-template">
+                    {{#each quotes}}
+                    <li>{{quote}}<i class="far fa-bookmark" id="fav1" onclick="bookMark(this)"></i></li>
+                    {{/each}}
+                </ul>
+            </div-->
+ <header>
+            <img src="/css/books.png" alt="book-logo" width="200" height="150">
+            <p>
+              Welcome! Here you can find a wide variety of digital books.
+              Let's get this started!
+            </p>
+      </header>
+      <label for="key-word">
+          
+            <span>Enter a book's title: </span>
+            <input type="text" id="key-word" name="keyWord">
+            <button type="button" onclick="loadResults()"><i class="fas fa-search"></i></button>
+            <span class="error"></span>
+            
+            
+            <div id="bookData">
+                    
+                <ul id="list">
+                    {{#each quotes}}
+                    <li>{{quote}}
+                    <i class="far fa-bookmark" id="fav1" onclick="bookMark(this)"></i>
+                    <div class="popup" onclick="popUp()">               
+                        <span class="popuptext" id="myPopup">Το βιβλίο προστέθηκε στα αγαπημένα!</span>
+                    </div>
+                    <span style="visibility: hidden;" id="discard">
+                        Αφαίρεση από τα αγαπημένα
+                    </span>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            
+            <p style="visibility:hidden;" id="showMore">Περισσότερα αποτελέσματα...</p>
+            <div style="visibility:hidden;" id="more">
+            </div>
+      </label>
+      <footer>
+            <p>Author: Katerina Markaki</p>
+            <p>All rights reserved || This website has been created for educational purposes.</p>
+      </footer>
+
+      
+        <script 
+        id="more-template" type="text/x-handlebars-template">
+            <ul id="list">
+                {{#each quotes}}
+                  <li>{{quote}}<i class="far fa-bookmark" id="fav1" onclick="bookMark(this)"></i></li>
+                {{/each}}
+            </ul>
+        </script>

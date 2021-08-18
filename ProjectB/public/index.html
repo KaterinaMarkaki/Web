@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Digital BookStore</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/6e9f83640f.js" crossorigin="anonymous"></script>
+        <script src="/js/BookR.js" type="text/javascript"></script>
+        <script src="/js/handlebars-v4.7.7.js"></script> 
+    </head>
+    <body>
+        <header>
+            <img src="/css/books.png" alt="book-logo" width="300" height="200">
+            <p>
+              Welcome! Here you can find a wide variety of digital books.
+              Let's get this started!
+            </p>
+        </header>
+        <nav class="flex-container">
+          <a>Search</a>
+          <a href="favBooks.html">Favourite Books</a>
+        </nav>
+        <br>
+        <label for="key-word">
+            <span>Enter a book's title or a key word: </span>
+            <input type="text" id="key-word" name="keyWord" placeholder="E.g. drama..">
+            <button type="button" onclick="loadResults()"><i class="fas fa-search"></i></button>
+            <br>
+            <span id="error"></span>
+              <div id="bookData" name="name">
+                
+              </div>            
+            <p style="visibility:hidden;" id="showMore">Περισσότερα αποτελέσματα...</p>
+            <div id="more">
+              
+            </div>
+          </label>
+
+          <footer class="box-model">
+            <p>Author: Katerina Markaki</p>
+            <p>All rights reserved || This website has been created for educational purposes.</p>
+          </footer>
+        
+
+        <script id="quote-template" type="text/x-handlebars-template">
+                    
+        <ul id="list1">
+
+            {{#each quotes}}
+              <li>{{quote.title}} <br> {{quote.author}} <br> {{quote.id}} <br>
+                <i class="far fa-bookmark" id="fav1" onclick="bookMark(this)">
+            
+                  <span id="discard"></span>
+                  </i>
+                  <br>
+                
+              </li>
+            {{/each}}
+        </ul>
+        </script>
+
+        <script id="more-template" type="text/x-handlebars-template">
+            <ul id="list2">
+                {{#each quotes}}
+                  <li>{{quote.title}} <br> {{quote.author}}<br> {{quote.id}}<br>
+                    <i class="far fa-bookmark" id="fav1" onclick="bookMark(this)">
+                      <span id="discard"></span>
+                    </i>
+                    <br>
+  
+                  </li>
+                {{/each}}
+            </ul>
+            
+        </script>
+
+    
+    </body>
+
+</html>
